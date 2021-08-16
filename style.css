@@ -19,7 +19,7 @@
   width: 200px;
 }
 
-@media screen and (max-width: 395px) {
+@media screen and (max-width: 540px) {
   #menu {
     width: 100%;
   }
@@ -33,7 +33,7 @@
   padding: 20px;
 }
 
-@media screen and (max-width: 395px) {
+@media screen and (max-width: 540px) {
   #section {
     float: right;
   }
@@ -55,6 +55,22 @@ h3 {
   .image {
     width: 150px;
     height: 100px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .image {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .image {
+    width: 100%;
+    height: 250px;
     margin-bottom: 10px;
   }
 }
