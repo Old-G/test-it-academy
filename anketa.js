@@ -4,13 +4,11 @@ let secondName = prompt('отчество')
 
 let age = prompt('возраст')
 
-if (age === true) {
-  parseInt(age)
-}
+let numAge = +age
 
-let ageDays = age * 365
+let ageDays = numAge * 365
 
-let ageAfter = age + 5
+let ageAfter = numAge + 5
 
 let gender = confirm('ваш пол - мужской?')
 
@@ -20,19 +18,19 @@ if (gender === false) {
 
 const whatGender = gender ? 'мужской' : 'женский'
 
-const timeRelaxMen = gender && age >= 60 ? 'да' : 'нет'
-const noTimeRelaxMen = gender && age <= 60 ? 'нет' : 'да'
-const relaxMen = gender && age >= 60 ? timeRelaxMen : noTimeRelaxMen
+const timeRelaxMen = gender && numAge >= 60 ? 'да' : 'нет'
+const noTimeRelaxMen = gender && numAge <= 60 ? 'нет' : 'да'
+const relaxMen = gender && numAge >= 60 ? timeRelaxMen : noTimeRelaxMen
 
-const timeRelaxWoman = !gender && age >= 55 ? 'да' : 'нет'
-const noTimeRelaxWoman = !gender && age <= 55 ? 'нет' : 'да'
-const relaxWoman = !gender && age >= 55 ? timeRelaxWoman : noTimeRelaxWoman
+const timeRelaxWoman = !gender && numAge >= 55 ? 'да' : 'нет'
+const noTimeRelaxWoman = !gender && numAge <= 55 ? 'нет' : 'да'
+const relaxWoman = !gender && numAge >= 55 ? timeRelaxWoman : noTimeRelaxWoman
 
 const genderWho = gender ? relaxMen : relaxWoman
 
 alert(`
   ФИО: ${lastName} ${firstName} ${secondName}
-  ваш возраст в годах: ${age}
+  ваш возраст в годах: ${numAge}
   ваш возраст в днях: ${ageDays}
   через 5 лет вам будет: ${ageAfter}
   пол: ${whatGender}
